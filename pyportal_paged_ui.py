@@ -99,43 +99,43 @@ row1_y = 0
 row2_y = 110
 
 cmd00_button = PaddedButton(x=0, y=row1_y, width=button_width, height=button_height,
-                            fill_color=page0_color, outline_color=0xFFFFFF,
+                            fill_color=None, outline_color=0xFFFFFF,
                             selected_outline=0x00ff00, selected_fill=0x00ff00,
                             label="CMD 0", label_font=font, label_color=0xffffFF, id=0,
                             style=1, margin=button_margin, padding=(5, 5))
 cmd01_button = PaddedButton(x=80, y=row1_y, width=button_width, height=button_height,
-                            fill_color=page0_color, outline_color=0xFFFFFF,
+                            fill_color=None, outline_color=0xFFFFFF,
                             selected_outline=0x00ff00, selected_fill=0x00ff00,
                             label="CMD 1", label_font=font, label_color=0xffffFF, id=1,
                             style=1, margin=button_margin, padding=(5, 5))
 cmd02_button = PaddedButton(x=160, y=row1_y, width=button_width, height=button_height,
-                            fill_color=page0_color, outline_color=0xFFFFFF,
+                            fill_color=None, outline_color=0xFFFFFF,
                             selected_outline=0x00ff00, selected_fill=0x00ff00,
                             label="CMD 2", label_font=font, label_color=0xffffFF, id=2,
                             style=1, margin=button_margin, padding=(5, 5))
 cmd03_button = PaddedButton(x=240, y=row1_y, width=button_width, height=button_height,
-                            fill_color=page0_color, outline_color=0xFFFFFF,
+                            fill_color=None, outline_color=0xFFFFFF,
                             selected_outline=0x00ff00, selected_fill=0x00ff00,  
                             label="CMD 3", label_font=font, label_color=0xffffFF, id=3,
                             style=1, margin=button_margin, padding=(5, 5))
 
 cmd04_button = PaddedButton(x=0, y=row2_y, width=button_width, height=button_height,
-                            fill_color=page0_color, outline_color=0xFFFFFF,
+                            fill_color=None, outline_color=0xFFFFFF,
                             selected_outline=0x00ff00, selected_fill=0x00ff00,
                             label="CMD 4", label_font=font, label_color=0xffffFF, id=4,
                             style=1, margin=button_margin, padding=(5, 5))
 cmd05_button = PaddedButton(x=80, y=row2_y, width=button_width, height=button_height,
-                            fill_color=page0_color, outline_color=0xFFFFFF,
+                            fill_color=None, outline_color=0xFFFFFF,
                             selected_outline=0x00ff00, selected_fill=0x00ff00,
                             label="CMD 5", label_font=font, label_color=0xffffFF, id=5,
                             style=1, margin=button_margin, padding=(5, 5))
 cmd06_button = PaddedButton(x=160, y=row2_y, width=button_width, height=button_height,
-                            fill_color=page0_color, outline_color=0xFFFFFF,
+                            fill_color=None, outline_color=0xFFFFFF,
                             selected_outline=0x00ff00, selected_fill=0x00ff00,
                             label="CMD 6", label_font=font, label_color=0xffffFF, id=6,
                             style=1, margin=button_margin, padding=(5, 5))
 cmd07_button = PaddedButton(x=240, y=row2_y, width=button_width, height=button_height,
-                            fill_color=page0_color, outline_color=0xFFFFFF,
+                            fill_color=None, outline_color=0xFFFFFF,
                             selected_outline=0x00ff00, selected_fill=0x00ff00,
                             label="CMD 7", label_font=font, label_color=0xffffFF, id=7,
                             style=1, margin=button_margin, padding=(5, 5))
@@ -202,8 +202,6 @@ while True:
                     active_fill = active_outline = page0_color
                     main_page.fill= page0_color
                     main_page.outline= page0_color
-                    for button in buttons:
-                        button.fillcolor = page0_color
 
                 elif b == tab1:
                     active_page = 1
@@ -211,8 +209,6 @@ while True:
                     active_fill = active_outline = page1_color
                     main_page.fill= page1_color
                     main_page.outline= page1_color
-                    for button in buttons:
-                        button.fillcolor = page1_color
                     
                 elif b == tab2:
                     active_page = 2
@@ -220,8 +216,6 @@ while True:
                     active_fill = active_outline = page2_color
                     main_page.fill= page2_color
                     main_page.outline= page2_color
-                    for button in buttons:
-                        button.fillcolor = page2_color
                     
                 elif b == tab3:
                     active_page = 3
@@ -229,8 +223,6 @@ while True:
                     active_fill = active_outline = page3_color
                     main_page.fill = page3_color
                     main_page.outline= page3_color
-                    for button in buttons:
-                        button.fillcolor = page3_color
 
             else:
                 b.selected = False
